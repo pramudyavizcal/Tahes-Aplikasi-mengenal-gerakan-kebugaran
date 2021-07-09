@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/noPlanJadwalLayout"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:text="oops,..Kamu belum atur jadwal latihan kamu"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"/>
+        <Button
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:text="Atur Sekarang"
+            android:fontFamily="@font/roboto"
+            android:background="#FFEB3B"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:onClick="aturSekarangbtn"
+            android:id="@+id/aturJadwal"/>
+    </RelativeLayout>
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedcScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/seninLayout"
+                android:background="#F44336"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txtSenin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Senin"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/seninEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Edit"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:onClick="onClick"
+                    android:textSize="20sp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recViewSenin"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtSenin"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:layout_marginTop="2dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/selasaLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seninLayout"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="#E91E63">
+
+                <TextView
+                    android:id="@+id/txtSelasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selasa"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/selasaEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Edit"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:onClick="onClick"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recViewSelasa"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtSelasa" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rabuLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/selasaLayout"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="#9C27B0">
+
+                <TextView
+                    android:id="@+id/txtRabu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rabu"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/rabuEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Edit"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:onClick="onClick"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recViewRabu"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtRabu" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/kamisLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rabuLayout"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="#673AB7">
+
+                <TextView
+                    android:id="@+id/txtKamis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kamis"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/kamisEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Edit"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:onClick="onClick"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recViewKamis"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtKamis" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/jumatLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kamisLayout"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="#4CAF50">
+
+                <TextView
+                    android:id="@+id/txtJumat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jumat"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/jumatEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Edit"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:onClick="onClick"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recViewJumat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:layout_below="@id/txtJumat"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/sabtuLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/jumatLayout"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="#CDDC39">
+
+                <TextView
+                    android:id="@+id/txtSabtu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sabtu"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/sabtuEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Edit"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:onClick="onClick"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recViewSabtu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:layout_below="@id/txtSabtu"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/mingguLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sabtuLayout"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:background="#FF5722">
+
+                <TextView
+                    android:id="@+id/txtMinggu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Minggu"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/mingguEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="Edit"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:onClick="onClick"
+                    android:textSize="20sp"
+                    tools:ignore="OnClick" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recViewMinggu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColor="#000000"
+                    android:layout_below="@id/txtMinggu" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

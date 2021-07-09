@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFEB3B">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:fontFamily="@font/roboto"
+        android:textSize="25sp"
+        android:padding="10dp"
+        android:gravity="center_horizontal"
+        android:justificationMode="inter_word"
+        android:layout_centerVertical="true"
+        android:text="Tahes merupakan aplikasi yang menyediakan pengenalan sekaligus praktek gerakan kebugaran/workout yang bisa dilakukan dari rumah, terdapat beberapa penjelasan manfaat melakukan gerakan dan langkah melakukannya."
+        >
+    </TextView>
+
+</RelativeLayout>

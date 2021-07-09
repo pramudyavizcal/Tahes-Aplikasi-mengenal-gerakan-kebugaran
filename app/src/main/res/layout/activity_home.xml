@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".HomeActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TAHES"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="30dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/jadwalTahes"
+        android:visibility="gone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Jadwal Tahes"
+        android:textColor="#000000"
+        android:layout_below="@+id/tentangTahes"
+        android:layout_marginTop="140dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/roboto"
+        android:background="#FFEB3B"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/latihanTahes"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Latihan Tahes"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:fontFamily="@font/roboto"
+        android:background="#FFEB3B"/>
+
+    <Button
+        android:id="@+id/tentangTahes"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Tentang tahes"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/latihanTahes"
+        android:fontFamily="@font/roboto"
+        android:background="#FFEB3B"/>
+
+    <com.startapp.sdk.ads.banner.Banner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

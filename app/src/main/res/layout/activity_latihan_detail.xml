@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    >
+
+    <Button
+        android:id="@+id/tambahkanBtn"
+        android:visibility="gone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#000000"
+        android:background="#FFEB3B"
+        android:text="Tambahkan ke latihan saya"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/namaLatihan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Workout name"
+        android:textSize="40dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:layout_below="@+id/tambahkanBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <ImageView
+        android:id="@+id/gambarLatihan"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_below="@id/namaLatihan"
+        android:layout_marginTop="20dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gambarLatihan"
+        android:layout_above="@id/banner"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is the short description of workout"
+        android:id="@+id/details"
+        android:fontFamily="@font/roboto"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/gambarLatihan"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="italic"/>
+    </androidx.core.widget.NestedScrollView>
+    <com.startapp.sdk.ads.banner.Banner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/banner"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>
